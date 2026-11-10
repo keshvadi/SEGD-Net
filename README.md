@@ -1,9 +1,7 @@
 # SEGD-Net
 
 Reference implementation of the Semi-Supervised Ensemble Graph Distillation
-Network for breast histopathology experiments. The graph filtration is a
-sequence of expanding spatial contexts ("pseudo-time"), not a temporal
-acquisition of the tissue.
+Network for breast histopathology experiments. 
 
 ## Installation
 
