@@ -1,0 +1,22 @@
+from setuptools import find_packages, setup
+
+setup(
+    name="segdnet",
+    version="0.1.0",
+    description="Semi-supervised graph distillation for histopathology research",
+    packages=find_packages(),
+    python_requires=">=3.10",
+    install_requires=[
+        "torch>=2.1",
+        "torchvision>=0.16",
+        "torch-geometric>=2.4",
+        "numpy>=1.24",
+        "scipy>=1.10",
+        "scikit-image>=0.21",
+        "scikit-learn>=1.3",
+        "opencv-python-headless>=4.8",
+        "Pillow>=10.0",
+        "matplotlib>=3.7",
+        "PyYAML>=6.0",
+    ],
+)

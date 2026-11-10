@@ -1,0 +1,30 @@
+dataset: bach
+num_classes: 2
+image_size: 224
+folds: 5
+train_fraction: 0.70
+validation_fraction: 0.10
+test_fraction: 0.20
+labeled_fraction: 0.30
+label_noise: 0.0
+noise_mode: symmetric
+batch_size: 8
+epochs: 100
+warmup_epochs: 25
+learning_rate: 0.0001
+weight_decay: 0.0001
+alpha: 0.60
+lambda_kd: 0.40
+temperature: 2.5
+confidence_threshold: 0.85
+entropy_threshold: 0.50
+relabel_threshold: 0.90
+graph:
+  scales: 4
+  base_radius: 35.0
+  radius_growth: 1.6
+  spatial_bandwidth: 0.5
+  feature_bandwidth: 1.0
+  input_dim: 64
+  hidden_dim: 128
+seed: 17
