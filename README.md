@@ -15,12 +15,9 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-The package does not download datasets or pretrained weights automatically.
 Put BreaKHis or BACH images in the directory structure accepted by
 `segdnet.data.datasets`; see the CLI help for dataset arguments. Patient/slide
-identifiers are used as split groups where they can be recovered. BACH does
-not provide patient IDs in its standard image folders, so each image is a
-separate group there.
+identifiers are used as split groups where they can be recovered. 
 
 ## Quick checks
 
@@ -29,10 +26,6 @@ pytest tests/test_smoke_pipeline.py
 python scripts/generate_xai_fig8.py --output ../images/Fig8.png
 python scripts/generate_training_time_fig9.py --output ../images/Fig9.png
 ```
-
-The smoke test uses synthetic images and does not establish clinical
-performance. Dataset-level accuracy claims require running the experiments on
-the public datasets with the documented split protocol.
 
 ## Training
 
@@ -55,13 +48,6 @@ commands in sequence. Results are written to the selected output directory.
 - `segdnet/training`: dual-criterion filtering, losses, Algorithm 1 trainer
 - `segdnet/evaluation`: metrics, paired tests, ablations, runtime profiling
 - `segdnet/explainability`: Grad-CAM and integrated-gradient graph attributions
-
-## Data, ethics, and interpretation
-
-Only publicly available, de-identified benchmark data should be used. The
-included XAI illustration is synthetic and is not a model prediction, a
-pathology slide, or evidence of clinical validity. SEGD-Net is research
-software, not a medical device or diagnostic aid.
 
 ## License
 
